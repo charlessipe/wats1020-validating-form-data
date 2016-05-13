@@ -15,7 +15,9 @@ $(document).on('ready', function(){  // create a document ready handler
     submitHandler : function(form) {  // connect validation object to the event handler
       form.submit();
     },
-    
+    onfocusout: function(element) {
+      $(element).valid();
+    },
     rules: {
       "your-name": {
         required: true,
@@ -41,8 +43,7 @@ $(document).on('ready', function(){  // create a document ready handler
       },
       "card-holder-name": {
         required: true,
-        maxlength: 128,
-        lettersonly: true
+        maxlength: 128
       },
       "card-number": {
         required: true,
