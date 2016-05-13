@@ -41,7 +41,8 @@ $(document).on('ready', function(){  // create a document ready handler
       },
       "card-holder-name": {
         required: true,
-        maxlength: 128
+        maxlength: 128,
+        lettersonly: true
       },
       "card-number": {
         required: true,
